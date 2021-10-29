@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue ATM</title>
+  </head>
+  <body>
+    <section id="app1">
+      <h3>入力画面</h3>
+      <div>
+        <input type="number" v-model="textInput" />
+        <p>入力額:{{ textInput }}円</p>
+      </div>
+      <div>
+        <button v-on:click="nyukin">入金</button>
+        <button v-on:click="syukkin" v-bind:disabled="isDisabled">出金</button>
+      </div>
+      <h3>口座残高</h3>
+      <div>
+        残高:{{ zandaka }}円
+      </div>
+      <h3>取引記録</h3>
+      <ul id="v-for-object" class="demo">
+        <li v-for>
+          {{ value }}
+        </li>
+    </section>
+    <!-- <section id="app1">
+      <h3>入力画面</h3>
+      <div>
+        <input type="number" v-model="textInput" />
+        <p>入力額: {{ textInput }}円</p>
+      </div>
+      <div>
+        <button v-on:click="nyukin">入金</button>
+        <button v-on:click="syukkin">出金</button>
+      </div>
+
+      <h3>口座残高</h3>
+      <div>
+        残高:{{ zandaka }}円
+      </div>
+    </section>
+
+    <section id="app3">
+      <h3>取引記録</h3>
+      <div>日付:{{ date }}</div>
+      <div>操作:{{ type }}</div>
+      <div>金額:{{ money }}</div>
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

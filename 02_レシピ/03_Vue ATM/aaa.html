@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue ATM</title>
+  </head>
+  <body>
+    <section id="app1">
+      <div>
+        <input type="text" v-model="textInput" />
+        <p>入力額: {{ textInput }}円</p>
+      </div>
+    </section>
+    <button v-on:click="nyukin">入金</button>
+    <button v-on:click="syukkin">出金</button>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="bbb.js"></script>
+  </body>
+</html>
